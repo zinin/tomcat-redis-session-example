@@ -1,0 +1,126 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ru.zinin</groupId>
+    <artifactId>tomcat-redis-session-embedded-sample</artifactId>
+    <packaging>jar</packaging>
+    <name>Tomcat Redis Session Embedded Sample</name>
+    <version>0.1-SNAPSHOT</version>
+    <description>Tomcat Redis Session Embedded Sample</description>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:svn:https://svn.java.net/svn/tomcat-redis-session~source-code-repository/</connection>
+        <developerConnection>scm:svn:https://svn.java.net/svn/tomcat-redis-session~source-code-repository/</developerConnection>
+        <url>http://java.net/projects/tomcat-redis-session/sources/source-code-repository/show</url>
+    </scm>
+
+    <issueManagement>
+        <system>JIRA</system>
+        <url>http://java.net/jira/browse/TOMCAT_REDIS_SESSION</url>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <id>zinin</id>
+            <name>Alexander V. Zinin</name>
+            <email>mail@zinin.ru</email>
+        </developer>
+    </developers>
+
+    <repositories>
+        <repository>
+            <id>maven.zinin.ru</id>
+            <name>maven.zinin.ru</name>
+            <url>http://maven.zinin.ru/content/repositories/tomcat-redis-session/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
+    <properties>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <tomcat.version>7.0.27</tomcat.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.zinin</groupId>
+            <artifactId>tomcat-redis-session</artifactId>
+            <version>0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-pool</groupId>
+            <artifactId>commons-pool</artifactId>
+            <version>1.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-catalina</artifactId>
+            <version>${tomcat.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.tomcat</groupId>
+                    <artifactId>tomcat-juli</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jasper</artifactId>
+            <version>${tomcat.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.tomcat</groupId>
+                    <artifactId>tomcat-juli</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-logging-log4j</artifactId>
+            <version>${tomcat.version}</version>
+        </dependency>
+    </dependencies>
+</project>
