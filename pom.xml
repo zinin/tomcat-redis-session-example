@@ -18,9 +18,10 @@
     </licenses>
 
     <scm>
-        <connection>scm:svn:https://svn.java.net/svn/tomcat-redis-session~source-code-repository/</connection>
-        <developerConnection>scm:svn:https://svn.java.net/svn/tomcat-redis-session~source-code-repository/</developerConnection>
-        <url>http://java.net/projects/tomcat-redis-session/sources/source-code-repository/show</url>
+        <connection>scm:git:git@github.com:zinin/tomcat-redis-session-example.git</connection>
+        <developerConnection>scm:git:git@github.com:zinin/tomcat-redis-session-example.git</developerConnection>
+        <url>git@github.com:zinin/tomcat-redis-session-example.git</url>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
