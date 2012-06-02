@@ -36,15 +36,6 @@
         </developer>
     </developers>
 
-    <repositories>
-        <repository>
-            <id>maven.zinin.ru</id>
-            <name>maven.zinin.ru</name>
-            <url>http://maven.zinin.ru/content/repositories/tomcat-redis-session/</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
-
     <properties>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
         <tomcat.version>7.0.27</tomcat.version>
@@ -54,7 +45,7 @@
         <dependency>
             <groupId>ru.zinin</groupId>
             <artifactId>tomcat-redis-session</artifactId>
-            <version>0.3</version>
+            <version>0.4</version>
         </dependency>
 
         <dependency>
