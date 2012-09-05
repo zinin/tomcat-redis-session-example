@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.List;
 
 /**
@@ -59,6 +60,17 @@ public class MainServlet extends HttpServlet {
             resp.getWriter().println("attributes: " + attributes);
 
             resp.getWriter().print("obj: " + session.getAttribute("obj"));
+        }
+
+        Enumeration<String> headers = req.getHeaderNames();
+        while (headers.hasMoreElements()) {
+            String headerName = headers.nextElement();
+            Enumeration<String> values = req.getHeaders(headerName);
+            while (values.hasMoreElements()) {
+                String headerValue = values.nextElement();
+
+                resp.getWriter().println("Header: " + headerName + "; Value: " + headerValue);
+            }
         }
 
         LOGGER.info("------------ end servet --------------");
