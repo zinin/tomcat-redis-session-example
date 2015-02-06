@@ -103,6 +103,7 @@ public class Main {
         contextResource.setProperty("factory", "ru.zinin.redis.factory.JedisPoolFactory");
         contextResource.setProperty("max-active", "10");
         contextResource.setProperty("timeout", "30");
+        contextResource.setProperty("database", "1");
 
         tomcat.getServer().getGlobalNamingResources().addResource(contextResource);
 
@@ -125,7 +126,6 @@ public class Main {
 
         RedisManager redisManager = new RedisManager();
 //        redisManager.setDisableListeners(true);
-        redisManager.setDbIndex(1);
         ctx.setManager(redisManager);
     }
 
